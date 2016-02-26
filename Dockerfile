@@ -1,11 +1,11 @@
-FROM centos:6
+FROM centos:7
 MAINTAINER Pawel Madon
 
 # Update base container
 RUN yum update -y
 
 # Install puppet repo and puppet agent 4.x
-RUN rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm && \
+RUN rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm && \
     yum -y install puppet-agent
 
 # Install hiera-eyaml for hiera data encryption
